@@ -22,8 +22,8 @@ public class task2 {
             double distance = Math.sqrt(Math.pow(point.x - circle.x, 2) +
                                         Math.pow(point.y - circle.y, 2));
             
-            
-            if (distance == 0) System.out.println(0);
+            // System.out.println(point.x + " " + point.y);
+            if (distance == circle.radius) System.out.println(0);
             else if (distance < circle.radius) System.out.println(1);
             else System.out.println(2);
         }
@@ -73,7 +73,7 @@ public class task2 {
         public Point(String pointData) {
             String[] pointCoords = pointData.split(" ");
             x = Double.parseDouble(pointCoords[0]);
-            y = Double.parseDouble(pointCoords[0]);
+            y = Double.parseDouble(pointCoords[1]);
         }
     }
 }
